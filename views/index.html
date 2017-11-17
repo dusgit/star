@@ -1,0 +1,68 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <template src="header"/>
+        <title>STAR</title>
+		<style type="text/css">
+			#topbar{
+				height:30px;
+				background-color:#eee;
+				line-height:30px;
+			}
+			#show{
+				background-color:#ccc;
+			}
+			.simg{
+				float:left;
+				width:62%;
+				height:100%;
+				background-color:#cee;
+			}
+			.slist{
+				float:left;
+				width:38%;
+				height:100%;
+				background-color:#cce;
+			}
+			.nul{
+				
+			}
+			.nul li{
+				height:30px;
+				line-height:30px;
+				border-bottom:1px solid #ccc;
+			}
+		</style>
+    </head>
+    <body>
+		<div id="topbar">
+			i am house light!
+		</div>
+		<div id="show">
+			<div class="simg">
+			
+			</div>
+			<div class="slist">
+			
+			</div>
+		</div>
+		<ul class="nul" id="nul">
+		</ul>
+    </body>
+    <script type="text/javascript">
+       $(document).ready(function(){
+			var w = $(document).width();
+			var h = $(document).height();
+			var sh = w;
+			$('#show').css({height:sh+'px'});
+			init();
+	   });
+	   function init(){
+			var html = '';
+			for(var i=0;i<5;i++){
+				html += '<li>'+(i+1)+'：</li>';
+			}
+			$('#nul').html(html);
+	   }
+    </script>
+</html>
