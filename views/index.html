@@ -58,6 +58,16 @@
 			init();
 	   });
 	   function init(){
+			$.ajax({
+				url:'/dataIndex',
+				data:{},
+				type:'get',
+				success:function(res){
+					$.each(res.news,function(ele,idx){
+						
+					});
+				}
+			});
 			var html = '';
 			for(var i=0;i<5;i++){
 				html += '<li>'+(i+1)+'：</li>';

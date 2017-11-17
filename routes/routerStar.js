@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
 
 router.get('/dataIndex', function(req, res, next) {
 	star.index(function(result){
-		res.html('index', result);
+		res.json(result);
 	});
 });
 
