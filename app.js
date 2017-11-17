@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var filter = require('./server/filter');
 
-var common = require('./routes/routerCommon');
+var star = require('./routes/routerStar');
 
 var app = express();
 
@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(filter.filterHtml);
-app.use('/', common);
+app.use('/', star);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
