@@ -7,6 +7,7 @@ var bodyParser   = require('body-parser');
 var ejs          = require('ejs');
 
 var routerStar   = require('./routes/star');
+var routerManage   = require('./routes/manage/manage');
 
 var app          = express();
 
@@ -24,6 +25,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // add router
 app.use('/', routerStar);
+app.use('/m',routerManage);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
