@@ -1,78 +1,56 @@
 <!DOCTYPE>
 <html>
     <head>
-        <template src="header"/>
-        <title>dilireba-star.com</title>
+        <%include head.html %>
+        <title>index</title>
 		<style type="text/css">
-			#topbar{
-				height:30px;
-				background-color:#eee;
-				line-height:30px;
+			.lou{
+				height:400px;
+				border:1px solid #eee;
+				margin-top:10px;
 			}
-			#show{
-				background-color:#ccc;
+			.pg{
+				height:20px;
+				border:1px solid #eee;
+				margin-top:2px;
 			}
-			.simg{
-				float:left;
-				width:62%;
-				height:100%;
-				background-color:#cee;
+			.ac{
+				margin-top:10px;
 			}
-			.slist{
-				float:left;
-				width:38%;
-				height:100%;
-				background-color:#cce;
-			}
-			.nul{
-				
-			}
-			.nul li{
-				height:40px;
-				line-height:40px;
-				border-bottom:1px solid #ccc;
+			.ac li{
+				border:1px solid #eee;
+				height:60px;
+				line-height:60px;
+				margin-top:2px;
 			}
 		</style>
     </head>
     <body>
-		<div id="topbar">
-			i am house light!${title}${status}
+		<div class="topbar">
+		
 		</div>
-		<div id="show">
-			<div class="simg">
-			
-			</div>
-			<div class="slist">
-			
-			</div>
+		<!-- top -->
+		<ul class="lou wid">
+			<li>
+				
+			</li>
+		</ul>
+		<div class="pg wid">
+		
 		</div>
-		<ul class="nul" id="nul">
+		<ul class="ac wid">
+			<li>
+			
+			</li>
+			<li>
+			
+			</li>
+			<li>
+			
+			</li>
 		</ul>
     </body>
     <script type="text/javascript">
-       $(document).ready(function(){
-			var w = $(document).width();
-			var h = $(document).height();
-			var sh = w;
-			$('#show').css({height:sh+'px'});
-			init();
-	   });
-	   function init(){
-			$.ajax({
-				url:'/dataIndex',
-				data:{},
-				type:'get',
-				success:function(res){
-					$.each(res.news,function(ele,idx){
-						
-					});
-				}
-			});
-			var html = '';
-			for(var i=0;i<5;i++){
-				html += '<li>'+(i+1)+'：</li>';
-			}
-			$('#nul').html(html);
-	   }
+       
     </script>
 </html>

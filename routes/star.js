@@ -4,15 +4,7 @@ var star = require('../server/star');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-	star.index(function(result){
-		res.html('index', result);
-	});
-});
-
-router.get('/dataIndex', function(req, res, next) {
-	star.index(function(result){
-		res.json(result);
-	});
+	res.render('index', {title:'ejs'});
 });
 
 module.exports = router;
