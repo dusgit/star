@@ -4,6 +4,7 @@ var star = require('../server/star');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
+	
 	res.render('index', {title:'ejs'});
 });
 router.get('/news/:id', function(req, res, next) {
