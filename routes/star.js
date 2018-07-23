@@ -7,9 +7,9 @@ router.get('/', function(req, res, next) {
 	
 	res.render('index', {title:'ejs'});
 });
-router.get('/news/:id', function(req, res, next) {
+router.get('/article/:id', function(req, res, next) {
 	var id = req.params.id;
-	res.render('index', {title:'ejs'});
+	res.render('article', {title:'ejs'});
 });
 
 module.exports = router;

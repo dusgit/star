@@ -1,0 +1,45 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <%include head.html %>
+        <title>index</title>
+		<style type="text/css">
+			.l_m_d{
+				float:left;
+				width:200px;
+				margin:10px 0px 0px 0px;
+				border:1px solid #ddd;
+			}
+			.l_c_d{
+				float:right;
+				margin:10px 0px 0px 0px;
+				border:1px solid #ddd;
+			}
+		</style>
+    </head>
+    <body>
+	<div class="topbar">
+		
+	</div>
+	<div class="wid" id="wid">
+		<div class="l_m_d" id="lmd">
+			
+		</div>
+		<div class="l_c_d" id="lcd">
+		asd
+		</div>
+	</div>
+    </body>
+    <script type="text/javascript">
+        $(document).ready(function(){
+		
+			var w = $(window).width();
+			var h = $(window).height();
+			var wid = $('#wid').width();
+			
+			$('#lmd').css({height:(h - 60)+'px'});
+			$('#lcd').css({width:(wid - 210)+'px'});
+			
+	    });
+    </script>
+</html>
